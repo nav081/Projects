@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'loginpage.css' %}" />
+</head>
+
+    <body bgcolor="grey">
+        <div id="main">
+
+                <center><font class='header'>{{comname}}</font></center>
+                <div id="left">
+                
+                    <font class="value">Registered Name : {{name}}</font>
+                    <font class="value">Registered Email : {{email}}</font>   
+                    <font class="value">Registered Mobile : {{mob}}</font>                        
+                </div>
+                <div id="right">
+                    <center><font class='header1'>Mails & Goods Management</font></center>
+                    <a href="{% url 'entry' %}" class="button">Entry</a><br>
+                    <a href="{% url 'check' %}" class="button">Check Records</a>  
+                </div>
+          <a href="/mail" class="logout">Logout</a>
+        </div>                
+    </body>
+</html>
+
+

@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+    <head>
+        <title>Check Records</title>
+        <link rel="stylesheet" href="{% static 'check.css' %}"/>
+
+    </head>
+    <body>
+        <div id="main">
+            <center><font class="header">Search Records</font></center>
+        
+            <table height="50%"> 
+                <tr><form action="{% url 'date' %}">
+                    <td>Chack Today's Entry</td>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" class="button" value="Search"></td>
+                    </form>
+                </tr>
+
+                <tr>    <form method="get" >
+                        <td>Check Records by Sender name</td>
+                        <td><input type="text" name="sname"></td>
+                        <td><input type="submit" class="button" value="Search"></td>
+                        </form>
+                </tr>
+                <tr>    <form method="get">
+                        <td>Chack Records by Receiver name</td>
+                        <td><input type="text" name="rname"></td>
+                        <td><input type="submit" class="button" value="Search"></td>
+                        </form>
+                </tr>
+                <tr>    <form method="get">
+                        <td>Check Records by Delivery Number</td>
+                        <td><input type="text" name="dno"></td>
+                        <td><input type="submit" class="button" value="Search"></td>
+                        </form>
+                </tr>
+            </table>
+
+
+
+        </form>
+
+        </div>
+    </body>
+</html>

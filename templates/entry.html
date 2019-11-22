@@ -1,0 +1,45 @@
+{%load static %}
+<link rel="stylesheet" href="{% static 'entry.css' %}" />
+<body>
+    <div id="main">
+        <center><font class="header">Mails and Goods Entry</font></center>
+        <form method="get" action="{%url 'storedata' %}">
+            <center>
+            <table width="90%" height="80%" border="0">
+
+                <tr>
+                    <td>Name of Attendent</td>
+                    <td><input type="text" class="textbox" name="noa" /></td>
+                </tr>
+                <tr>
+                        <td>Type of Product</td>
+                        <td><input type="text" class="textbox" name="top" /></td>
+                </tr>
+                <tr>
+                        <td>Sender</td>
+                        <td><input type="text" class="textbox" name="send" /></td>
+                </tr>
+                <tr>
+                        <td>For Whome</td>
+                        <td><input type="text" class="textbox" name="for" /></td>
+                </tr>
+                <tr>
+                        <td>Delivery Number</td>
+                        <td><input type="text" class="textbox" name="dn" /></td>
+                </tr>
+                <tr>
+                        <td><input type="submit" class="button" value="SUBMIT"></td>
+                        <td><a href="/mail/back" class="button">Back</a></td>
+                </tr
+            </table>
+            </center>
+
+
+        </form>
+
+
+
+
+    </div>
+
+</body>

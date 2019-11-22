@@ -1,0 +1,66 @@
+{%load static%}
+<link rel="stylesheet" href="{%static 'login_signup.css' %}" />
+<body>
+    <center>
+<div class="Create">
+    <div class="header">Create Account</div>
+    <form method="POST" action="{%url 'store' %}">
+{% csrf_token %} 
+    <table width="100%" border="0">
+
+    <tr>
+            <td colspan="4" align="center">{% if messages %}
+                                                {% for msg in messages %}
+                                                {{msg}}
+                                                {% endfor %}
+                                                {% endif %}
+
+                    
+                
+                &nbsp;</td>
+    </tr>
+    <tr>
+
+            <td align="center">FULL NAME</td>
+            <td align="center" colspan="3"><input type="text" name="name" class="box"/></td>
+    </tr>
+    <tr>
+            <td align="center">GENDER</td>
+            <td align="center"><input type="radio" name="gender" value="male" checked> Male</td>
+            <td align="center"><input type="radio" name="gender" value="female"> Female</td>
+            <td align="center"><input type="radio" name="gender" value="other"> Other</td>
+    </tr>
+
+    <tr>
+
+            <td align="center">E-MAIL ID</td>
+            <td align="center" colspan="3"><input type="text" name="email" class="box"/></td>
+    </tr>
+    <tr>
+
+            <td align="center">MOBILE NUMBER</td>
+            <td align="center" colspan="3"><input type="text" name="mob" class="box"/></td>
+    </tr>
+    <tr>
+
+                <td align="center">COMPANY NAME</td>
+                <td align="center" colspan="3"><input type="text" name="comname" class="box"/></td>
+        </tr>
+    <tr>
+            <td align="center">PASSWORD</td>
+            <td align="center" colspan="3"><input type="password" name="pass" class="box"/></td>
+    </tr>
+
+<tr>
+    <td colspan="2" align="center">&nbsp;</form></td>
+</tr>
+<tr>
+        <td  align="center"><input type="SUBMIT" value="SUBMIT" class="but"></form></td>
+        <td  align="center" colspan="2"><a href='/mail' class="but"> LOGIN</a></td>
+        <td  align="center" colspan="2"><a href='/' class="but"> BACK</a></td>
+    </tr>
+</table>
+</form>
+</div>
+</center>
+</body>

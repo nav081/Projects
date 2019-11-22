@@ -1,0 +1,43 @@
+{%load static%}
+
+<link rel="stylesheet" href="{%static 'login_signup.css' %}" />
+<body>
+    <center>
+<div class="login">
+    <div class="header">Login</div>
+    <form method="POST" action="signin/">
+        {% csrf_token %}
+    <table width="100%" border="0">
+
+    <tr>
+            <td colspan="3" align="center">{% if messages %}
+                                {% for msg in messages %}
+                                {{msg}}
+                                {% endfor %}
+                                {% endif %}
+
+            </td>
+    </tr>
+    <tr>
+
+            <td align="center">MOBILE NUMBER</td>
+            <td align="center" colspan="2"><input type="text" name="mo_num" class="box"/></td>
+    </tr>
+    <tr>
+            <td align="center">PASSWORD</td>
+            <td align="center" colspan="2"><input type="password" name="pass" class="box"/></td>
+    </tr>
+
+<tr>
+    <td colspan="3" align="center">&nbsp;</form></td>
+</tr>
+<tr>
+        <td  align="center"><input type="SUBMIT" value="SUBMIT" class="but"></td>
+        <td  align="center"><a href="signup/" class="but">CREATE ACCOUNT</a></td>
+        <td  align="center"><a href='/' class="but"> BACK</a></td>
+    </tr>
+</table>
+</form>
+</div>
+</center>
+</body>
